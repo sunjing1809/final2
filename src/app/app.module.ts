@@ -1,20 +1,20 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppComponent }  from './app.component';
+import { HttpModule,JsonpModule  } from '@angular/http';
+import {Http, Response, RequestOptions, Headers} from '@angular/http';
+import{RouterModule}from "@angular/router";
+import { hourComponent }    from './hour_weather/hourly.component';
+import { routing } from './routes';
+import { cityComponent }    from './city/city.component';
 
-import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
+  imports: [ HttpModule,FormsModule, BrowserModule,JsonpModule , routing],
+  declarations: [ AppComponent ,
+  hourComponent,cityComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
