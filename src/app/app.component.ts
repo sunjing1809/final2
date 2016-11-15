@@ -112,7 +112,7 @@ export class AppComponent {
 
   makeRequest(): void {
     this.loading = true;
-   // this.checkCity(this.paramter);
+    this.checkCity(this.paramter);
     //this.http.request('http://api.openweathermap.org/data/2.5/forecast/city?q='+ this.paramter+ '&mode=xml&APPID=5a231059585708240fec9e8006f37248')
     this.http.request('https://api.wunderground.com/api/23ef06bc47cbce1b/conditions/hourly/q/'+ this.state+'/'+this.paramter+ '.json')
     //this.http.request('http://api.wunderground.com/api/23ef06bc47cbce1b/hourly/q/CA/San_Francisco.json')
