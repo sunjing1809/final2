@@ -114,7 +114,7 @@ export class AppComponent {
     this.loading = true;
    // this.checkCity(this.paramter);
     //this.http.request('http://api.openweathermap.org/data/2.5/forecast/city?q='+ this.paramter+ '&mode=xml&APPID=5a231059585708240fec9e8006f37248')
-    this.http.request('https://api.wunderground.com/api/23ef06bc47cbce1b/conditions/hourly/q/'+ this.state+'/'+this.paramter+ '.json')
+    this.http.request('http://api.wunderground.com/api/23ef06bc47cbce1b/conditions/hourly/q/'+ this.state+'/'+this.paramter+ '.json')
     //this.http.request('http://api.wunderground.com/api/23ef06bc47cbce1b/hourly/q/CA/San_Francisco.json')
       .subscribe((res: Response) => {
           console.log(res.json());
@@ -134,7 +134,7 @@ export class AppComponent {
   }
 checkCity(val: any): void {
 
- this.http.request('https://maps.googleapis.com/maps/api/geocode/json?address='+val +'&sensor=false')
+ this.http.request('http://maps.googleapis.com/maps/api/geocode/json?address='+val +'&sensor=false')
       .subscribe((res: Response) => {
           console.log(res.json());
           var num = res.json().results[0].address_components.length;
