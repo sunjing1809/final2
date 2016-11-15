@@ -49,7 +49,7 @@ constructor(private http: Http) {
   
   
     for( var x = 0; x < val.length; x++){
-         this.http.request('https://api.openweathermap.org/data/2.5/weather?lat='+val[x].lat+ '&lon=' +val[x].lon+'&APPID=5a231059585708240fec9e8006f37248' )
+         this.http.request('http://api.openweathermap.org/data/2.5/weather?lat='+val[x].lat+ '&lon=' +val[x].lon+'&APPID=5a231059585708240fec9e8006f37248' )
     //this.http.request('http://api.openweathermap.org/data/2.5/forecast/city?q='+ val[x]+ '&APPID=5a231059585708240fec9e8006f37248')
     //this.http.request('http://api.wunderground.com/api/23ef06bc47cbce1b/conditions/hourly/q/'+ this.state+'/'+val[x] + '.json')
     //this.http.request('http://api.wunderground.com/api/23ef06bc47cbce1b/hourly/q/CA/San_Francisco.json')
